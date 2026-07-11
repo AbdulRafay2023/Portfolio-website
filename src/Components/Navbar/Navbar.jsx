@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-scroll";
 const Navbar = () => {
   return (
     <nav className="flex items-center justify-between px-12 py-6">
@@ -13,7 +13,7 @@ const Navbar = () => {
       {/* Navigation */}
       <ul className="flex items-center gap-10 text-white font-medium">
         <li className="cursor-pointer hover:text-purple-500 transition duration-300">
-          Home
+          <Link>Home</Link>
         </li>
         <li className="cursor-pointer hover:text-purple-500 transition duration-300">
           About
