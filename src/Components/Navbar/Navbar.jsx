@@ -16,16 +16,16 @@ const Navbar = () => {
           <Link>Home</Link>
         </li>
         <li className="cursor-pointer hover:text-purple-500 transition duration-300">
-          About
+          <Link>Skills</Link>
+        </li>
+        <li className="cursor-pointer hover:text-purple-500 hover:underline transition duration-300">
+          <Link>Projects</Link>
         </li>
         <li className="cursor-pointer hover:text-purple-500 transition duration-300">
-          Skills
+          <Link>Experience</Link>
         </li>
         <li className="cursor-pointer hover:text-purple-500 transition duration-300">
-          Projects
-        </li>
-        <li className="cursor-pointer hover:text-purple-500 transition duration-300">
-          Contact
+          <Link>Certificates</Link>
         </li>
       </ul>
     </nav>
