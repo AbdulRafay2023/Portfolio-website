@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 const Navbar = () => {
+
+  const [isScroll,setIsScroll] = useState(false);
+  const handleScroll = () =>{
+    setIsScroll(window.scrollY > 200)
+  }
+
+  useEffect(()=>{
+    handleScroll()
+    window.addEventListener('scroll', handleScroll);
+    return ()=> window.removeEventListener('scroll', handleScroll);
+  },[])
+
   return (
-    <nav className="flex items-center justify-between px-12 py-6">
-      {/* Logo / Name */}
+     <nav className= {`fixed top-0 left-0 w-full bg-[#1a0216] flex items-center justify-between px-12 py-6 transition-all duration-300 ${isScroll ? "bg-[#1a0216]" :"bg-[#120018]/80 backdrop-blur-md shadow-lg"}`}>      {/* Logo / Name */}
       <div>
         <h1 className="text-3xl font-bold text-white tracking-wide">
           Abdul <span className="text-purple-500">Rafay</span>
